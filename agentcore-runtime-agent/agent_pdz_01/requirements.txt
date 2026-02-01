@@ -1,0 +1,6 @@
+bedrock-agentcore
+strands-agents
+bedrock-agentcore-starter-toolkit
+boto3
+requests
+awscli

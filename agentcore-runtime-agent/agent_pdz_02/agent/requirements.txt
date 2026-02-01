@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+mcp
+httpx
+strands-agents
+boto3
+requests
+awscli
+mcp-proxy-for-aws
