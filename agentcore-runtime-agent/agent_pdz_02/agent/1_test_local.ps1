@@ -24,7 +24,7 @@ $mcpServerIp = docker inspect mcp-server-test --format '{{.NetworkSettings.IPAdd
 
 if ($mcpServerIp) {
     Write-Host "  MCP server found at: $mcpServerIp - using HTTP (USE_MCP_ARN=false)"
-    docker run --platform linux/arm64 -p 8080:8080 -e USE_MCP_ARN=false -e MCP_SERVER_URL="http://${mcpServerIp}:8000/mcp" -v "${awsDir}:/root/.aws:ro" -e AWS_REGION=us-east-1 --name agent-test -d $IMAGE | Out-Null
+    docker run --platform linux/arm64 -p 8080:8080 -e USE_MCP_ARN=false -e MCP_SERVER_URL="http://${mcpServerIp}:8000/mcp" -v "${awsDir}:/root/.aws:ro" -e AWS_REGION=us-west-2 --name agent-test -d $IMAGE | Out-Null
 } else {
     Write-Host "  MCP server not running - using default (USE_MCP_ARN=true, AgentCore Runtime MCP)"
     docker run --platform linux/arm64 -p 8080:8080 -v "${awsDir}:/root/.aws:ro" -e AWS_REGION=us-west-2 --name agent-test -d $IMAGE | Out-Null
