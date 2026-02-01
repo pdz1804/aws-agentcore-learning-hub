@@ -1,0 +1,10 @@
+mcp-proxy-for-aws
+uvicorn
+pydantic
+bedrock-agentcore
+strands-agents
+bedrock-agentcore-starter-toolkit
+aws-opentelemetry-distro
+boto3
+requests
+awscli
